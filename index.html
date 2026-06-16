@@ -55,60 +55,36 @@
 .spec-card:nth-child(6) .spec-num, .srv-card:nth-child(6) .srv-num { color: #ffcc00 !important; }
   /* FORCE ALL TEXT WHITE */
 * { color: #ffffff !important; }
-/* ══ GLOBAL TEXT COLOR FIXES ══ */
-* { 
-  color: #ffffff; 
-}
-
-/* Accent words and cursor logic (Logo text color is removed from here) */
-.orange-word, .btn-primary span, #cur { 
-  color: #f97316 !important; 
-}
-
-/* Primary Button Styling */
-.btn-primary { 
-  background: #f97316 !important; 
-  color: #000000 !important; 
-}
-.btn-primary * {
-  color: #000000 !important;
-}
-
-/* Universal Cards Background */
-[class*="card"], [class*="spec"], [class*="serv"] { 
-  background: #111111 !important; 
-}
-
-/* Global Reset */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ══ NAV LOGO EXACT FIX ══ */
 .nav-logo {
   width: 46px;
   height: 46px;
   background: #f97316 !important; /* Pure Orange Box */
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Typography Fixed */
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
   letter-spacing: -0.5px;
-  color: #ffffff !important; /* Force Logo Text to White */
-  text-decoration: none;
+  
+  /* Super Force White Color */
+  color: #ffffff !important; 
+  -webkit-text-fill-color: #ffffff !important; /* Safari aur Chrome fix */
+  text-shadow: 0 0 1px #ffffff;
+  
+  text-decoration: none !important;
   transition: transform 0.3s cubic-bezier(.16, 1, .3, 1), box-shadow 0.3s ease;
-  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
 }
 
 .nav-logo:hover {
   transform: rotate(12deg) scale(1.08);
   color: #ffffff !important;
-  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+  -webkit-text-fill-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.6);
 }
 :root{
   --cream:#0a0a0a;--cream2:#111111;--white:#ffffff;
